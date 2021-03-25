@@ -34,8 +34,11 @@ let pets = [{
 }];
 
 const listarPets = () => {
-    for(let pet of pets){        
-        console.log(`${pet.nome}, ${pet.idade}, ${pet.tipo}, ${pet.raca}`);
+    for(let pet of pets){
+        console.log(`${pet.nome}, ${pet.idade}, ${pet.tipo}, ${pet.raca}`);        
+        for (let pet2 of pet.services) {            
+            console.log(pet2);
+        }        
     }
 }
 
@@ -121,7 +124,4 @@ const apararUnhasPet = (petty) => {
 darBanhoPet('Bela');
 tosarPet('Mika');
 apararUnhasPet('Veneno');
-
-for (let pet of pets) {
-    console.log(pet.services);
-}
+listarPets();
