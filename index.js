@@ -37,5 +37,25 @@ const listarPets = () => {
     }
 }
 
+const vacinarPets = (petty) => {
+    for (let pet of pets) {
+        if (petty === pet.nome) {
+            if (pet.vacinado === false) {
+                pet.vacinado = true;
+                console.log(`O pet ${petty} foi vacinado.`);
+                break;
+            } else {
+                console.log(`O pet ${petty} já estava vacinado.`);
+                break;
+            }
+        } else {
+            console.log("Não existe nenhum pet com esse nome.")
+            break;
+        }
+    }    
+}
+
+
+
+vacinarPets('Mika');
 listarPets();
-// console.log(pets);
