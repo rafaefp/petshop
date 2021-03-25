@@ -17,7 +17,7 @@ let pets = [{
     peso: 8,
     tutor: 'Tiago',
     contato: '(81) 98855-4565',
-    vacinado: false,
+    vacinado: true,
     services: ['banho', 'tosa']
 }, {
     nome: 'Veneno',
@@ -39,13 +39,13 @@ const listarPets = () => {
 
 const vacinarPets = (petty) => {
     for (let pet of pets) {
-        if (petty === pet.nome) {
+        if (pet.nome === petty) {
             if (pet.vacinado === false) {                
                 console.log(`O pet ${petty} foi vacinado com sucesso.`);                
             } else {
                 console.log(`O pet ${petty} já estava vacinado.`);                
             }
-        }
+        } 
     }    
 }
 
@@ -60,6 +60,24 @@ const campanhaVacina = () => {
     console.log(`${contPet} pets foram vacinados nessa campanha!`);
 }
 
+const adicionarCliente = (nome, tipo, idade, raca, peso, tutor, contato, vacinado) => {
+    let novoCliente = {
+        nome: nome,
+        tipo: tipo,
+        idade: idade,
+        raca: raca,
+        peso: peso,
+        tutor: tutor,
+        contato: contato,
+        vacinado: vacinado,
+        services: []
+    }
+    pets.push(novoCliente);
+}
+
+
 // listarPets();
 // vacinarPets('Mika');
-campanhaVacina();
+// campanhaVacina();
+adicionarCliente('Celso', 'cachorro', 7, 'vira', 10, 'rafael', '(81) 58654-7987', true);
+console.log(pets);
