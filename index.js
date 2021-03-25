@@ -81,27 +81,33 @@ const adicionarCliente = (nome, tipo, idade, raca, peso, tutor, contato, vacinad
 const darBanhoPet = (petty) => {
     for (let pet of pets) {
         if (pet.nome === petty) {
-            pet.services.push('banho');
-            console.log(`${pet.nome} está de banho tomado!`);
-            console.log(`Serviço realizado na data: ${moment().locale('pt').format('dddd, hA')}`);            
+            pet.services.push({
+                'services':'banho',
+                'data': moment().format('DD-MM-YYYY')
+            });
+            console.log(`${pet.nome} está de banho tomado!`);                        
         }
     }
 }
 const tosarPet = (petty) => {
     for (let pet of pets) {
         if (pet.nome === petty) {
-            pet.services.push('tosa');
-            console.log(`${pet.nome} está com cabelinho na régua!`);
-            console.log(`Serviço realizado na data: ${moment().locale('pt').format('dddd, hA')}`);
+            pet.services.push({
+                'services':'tosa',
+                'data': moment().format('DD-MM-YYYY')
+            });
+            console.log(`${pet.nome} está com cabelinho na régua!`);            
         }
     }
 }
 const apararUnhasPet = (petty) => {
     for (let pet of pets) {
-        if (pet.nome === petty) {
-            pet.services.push('corte de unhas');
-            console.log(`${pet.nome} está com as unhas aparadas!`);
-            console.log(`Serviço realizado na data: ${moment().locale('pt').format('dddd, hA')}`);
+        if (pet.nome === petty) {            
+            pet.services.push({
+                'services':'cortar unhas',
+                'data': moment().format('DD-MM-YYYY')
+            });
+            console.log(`${pet.nome} está com as unhas aparadas!`);            
         }
     }
 }
@@ -116,3 +122,6 @@ darBanhoPet('Bela');
 tosarPet('Mika');
 apararUnhasPet('Veneno');
 
+for (let pet of pets) {
+    console.log(pet.services);
+}
