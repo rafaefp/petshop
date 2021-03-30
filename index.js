@@ -17,9 +17,10 @@ const listarPets = () => {
         let {nome, idade, tipo, raca, vacinado, servicos} = pet;
         console.log(`${nome}, ${idade}, ${tipo}, ${raca}, ${(vacinado) ? 'vacinado': 'não vacinado'}`);
 
-        for (const servico of servicos) {
-            console.log(`${servico.data} - ${servico.nome}`);
-        }
+        servicos.forEach((servico) => {
+            let {data, nome} = servico;
+            console.log(`${data} - ${nome}`);
+        })
     });
 }    
 
@@ -139,7 +140,7 @@ const filtrarTutor = (nomeTutor) => {
     })
 }
 
-// listarPets();
+listarPets();
 // vacinarPets('Veneno');
 // campanhaVacina();
 // darBanhoPet(bancoDados.pets[4]);
