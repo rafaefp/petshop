@@ -58,6 +58,7 @@ const darBanhoPet = pet => {
         'nome':'banho',
         'data': moment().format('DD-MM-YYYY')
     });
+    atualizarBanco();
     console.log(`${pet.nome} está de banho tomado!`);
 };
 
@@ -66,6 +67,7 @@ const tosarPet = pet => {
         'nome':'tosa',
         'data': moment().format('DD-MM-YYYY')
     });
+    atualizarBanco();
     console.log(`${pet.nome} está com cabelinho na régua :)`);
 };
 
@@ -74,6 +76,7 @@ const apararUnhasPet = pet => {
         'nome':'corte de unhas',
         'data': moment().format('DD-MM-YYYY')
     });
+    atualizarBanco();
     console.log(`${pet.nome} está de unhas aparadas!`);
 };
 
@@ -134,4 +137,4 @@ const clientePremium = (pet) => {
 // console.log(buscarPet('Gai'));
 // console.log(filtrarTipoPet('cachorro'));
 // vacinarPets('Mika');
-console.log(clientePremium(bancoDados.pets[1]));
+// console.log(clientePremium(bancoDados.pets[1]));
