@@ -1,6 +1,6 @@
-let bancoDeDados = require("./pets.json");
+// let bancoDeDados = require("./pets.json");
 
-let pets = bancoDeDados.pets;
+// let pets = bancoDeDados.pets;
 
 // let petObj = {
 //     nome: 'Doug',
@@ -19,24 +19,35 @@ let pets = bancoDeDados.pets;
 // console.log(arquivoJson);
 // console.log(JSON.stringify(arquivoJson));
 
-const atenderCliente = (pet, servico) => {
-    console.log(`Olá, ${pet.nome}`);
-    (servico) ? servico() : console.log('Só vim dá uma olhadinha...');
-    console.log('Tchau, até mais!');
+// const atenderCliente = (pet, servico) => {
+//     console.log(`Olá, ${pet.nome}`);
+//     (servico) ? servico() : console.log('Só vim dá uma olhadinha...');
+//     console.log('Tchau, até mais!');
+// }
+
+// const darBanho = () => {
+//     console.log('dando banho no pet');
+// }
+
+// const apararUnhas = () => {
+//     console.log('aparando unhas...');
+// }
+
+
+
+// atenderCliente(pets[0], darBanho);
+// console.log();
+// atenderCliente(pets[1], apararUnhas);
+// console.log();
+// atenderCliente(pets[2]);
+
+let pessoa = {
+    nome: 'Iago',
+    idade: 25,
+    profissao: 'dev',
+    contato: '(81) 65446-8989',
+    habilidades: ['node.js', 'mysql', 'javascript', 'html']
 }
 
-const darBanho = () => {
-    console.log('dando banho no pet');
-}
-
-const apararUnhas = () => {
-    console.log('aparando unhas...');
-}
-
-
-
-atenderCliente(pets[0], darBanho);
-console.log();
-atenderCliente(pets[1], apararUnhas);
-console.log();
-atenderCliente(pets[2]);
+let {nome, contato} = pessoa;
+console.log(`${nome} - ${contato}`);
