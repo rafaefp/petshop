@@ -50,11 +50,12 @@ const campanhaVacina = () => {
     console.log(`${contPet} pets foram vacinados nessa campanha!`);
 };
 
-const adicionarPet = novoPet => {
-    let {nome} = novoPet;
-    bancoDados.pets.push(novoPet);
+const adicionarPet = (novoPet) => { //vários parametros podem ser passados na chamada da funcao
+    bancoDados.pets.push(...novoPet);
     atualizarBanco();
-    console.log(`O ${nome} foi adicionado com sucesso.`);
+    novoPet.forEach((pet) => {
+        console.log(`O ${pet.nome} foi adicionado com sucesso.`);
+    })    
 }
 
 const darBanhoPet = pet => {
@@ -140,7 +141,7 @@ const filtrarTutor = (nomeTutor) => {
     })
 }
 
-listarPets();
+// listarPets();
 // vacinarPets('Veneno');
 // campanhaVacina();
 // darBanhoPet(bancoDados.pets[4]);
@@ -169,3 +170,36 @@ listarPets();
 // console.log(clientePremium(bancoDados.pets[0]));
 // console.log(contatoTutor(bancoDados.pets[0]));
 // filtrarTutor('Tiago');
+// adicionarPet([{
+//     "nome": "Tobi",
+//     "tipo": "gato",
+//     "idade": 1,
+//     "raca": "Vira-lata",
+//     "peso": 3,
+//     "tutor": "Rafael",
+//     "contato": "(11) 96549-4555",
+//     "vacinado": false,
+//     "servicos": []
+// },
+// {
+//     "nome": "Bolinha",
+//     "tipo": "cachorro",
+//     "idade": 8,
+//     "raca": "Vira-lata",
+//     "peso": 8,
+//     "tutor": "Maria",
+//     "contato": "(11) 99889-4485",
+//     "vacinado": false,
+//     "servicos": []
+// },
+// {
+//     "nome": "Trovão",
+//     "tipo": "cachorro",
+//     "idade": 4,
+//     "raca": "Beagle",
+//     "peso": 8,
+//     "tutor": "Tiago",
+//     "contato": "(81) 98789-4555",
+//     "vacinado": true,
+//     "servicos": []
+// }]);

@@ -41,13 +41,21 @@
 // console.log();
 // atenderCliente(pets[2]);
 
-let pessoa = {
-    nome: 'Iago',
-    idade: 25,
-    profissao: 'dev',
-    contato: '(81) 65446-8989',
-    habilidades: ['node.js', 'mysql', 'javascript', 'html']
-}
+// let pessoa = {
+//     nome: 'Iago',
+//     idade: 25,
+//     profissao: 'dev',
+//     contato: '(81) 65446-8989',
+//     habilidades: ['node.js', 'mysql', 'javascript', 'html']
+// }
 
-let {nome, contato} = pessoa;
-console.log(`${nome} - ${contato}`);
+// let {nome, contato} = pessoa;
+// console.log(`${nome} - ${contato}`);
+
+// let turma1 = ['Anna', 'João', 'Vinicius', 'Igor'];
+// let turma2 = ['Janaina', 'Gustavo', 'Adriana', 'Isaac'];
+// let turmasAvanade = [...turma1, ...turma2];
+// console.log(turmasAvanade);
+// turma1.push(...turma2);
+// console.log(turma1);
+
